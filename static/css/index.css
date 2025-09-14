@@ -364,6 +364,36 @@ body {
   text-decoration: underline;
 }
 
+/* Method Overview Styles */
+.method-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.align-image {
+  max-width: 80%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.method-description {
+  margin-top: 2rem;
+}
+
+.method-description ol {
+  margin-left: 1.5rem;
+}
+
+.method-description li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
 /* BibTeX Styling */
 pre {
   background: var(--background-accent) !important;

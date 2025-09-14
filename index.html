@@ -311,13 +311,49 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Method Overview -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Method Overview</h2>
+    
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <!-- Method illustration image -->
+        <div class="has-text-centered">
+          <img src="static/images/align.png" alt="Motion Alignment" class="align-image">
+        </div>
+        
+        <!-- Method description -->
+        <div class="content has-text-justified method-description">
+          <p>
+            Our construction process emphasizes the following key principles: (1) Movable target objects: Diverse objects are placed in semantically appropriate areas of the scene, including multiple distractors of the same category, to facilitate spatial understanding. (2) Physically Coherent Motion Alignment: Human motion sequences are adjusted to achieve realistic interactions with objects at different positions. (3) Scene-aware Filtering for Physical Plausibility: The aligned motion-scene pairs are filtered to remove cases violating physical constraints, such as foot-ground detachment, boundary overflow, or human-object collisions.
+          </p>
+        </div>
+
+        <div class="has-text-centered">
+          <img src="static/images/method.png" alt="Pipeline" class="method-image">
+        </div>
+        
+        <!-- Method description -->
+        <div class="content has-text-justified method-description">
+          <p>
+            Compared to conventional Human-Scene or Human-Object Interaction generation tasks, our setting introduces unique challenges: the model must (1) identify the target object from free-form language in a 3D scene, (2) adapt the interaction to diverse object geometries and task descriptions, and (3) ensure the generated object trajectory is physically plausible and avoids collisions with the surrounding scene. To tackle these challenges, we propose a novel Affordance-Guided Collision-Aware Interaction Generation (AGCA) framework as shown in the figure. We begin with 3D object grounding using a pretrained grounding module with the text condition to identify its point cloud for the next stage. Next, we perform hand-object affordance learning uses an affordance diffusion module, which takes the object point cloud and text instruction as inputs and generates a fine-grained hand-object joint affordance to guide plausible hand-object contact by considering the object shape and size. This affordance represents the likelihood of interactions occurring between hand joints and object surfaces over time and is used to guide the interaction motion generation, enabling more accurate interactions aligned with object size and interaction semantics. Finally, we incorporate a collision-aware motion generation that voxelizes the region around the interactive object to evaluate spatial accessibility, as the local scene information around the object to be interacted with is more critical for preventing the object from collision through the scene. We also combined with a collision-aware loss that enforces physically plausible motion and prevents interpenetration. Conditioned on the text, local scene, and learned affordance, our model generates physically plausible motion sequences that align with both interaction semantics and environmental constraints.
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Method Overview -->
+
 
 
 <!-- Video carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">More Results</h2>
+      <h2 class="title is-3 has-text-centered">More Results</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
           <!-- TODO: Add poster image for better preview -->
